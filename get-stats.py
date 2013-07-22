@@ -1,18 +1,18 @@
-#!/usr/bin/env python
+﻿#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from psychopy import visual, core, event, gui
 from datetime import datetime
 import os
 
 # parameters
-rechner = "netb1"
+rechner = "netbX"
 folder = "data"
 
 filePath = os.path.join(folder, rechner + ".dat")
 
 #create a window to draw in
 myWin = visual.Window((1024.0,600.0),allowGUI=True,winType='pyglet',
-            monitor='testMonitor', units ='norm', screen=0, fullscr = True, color = "white")
+            monitor='testMonitor', units ='norm', screen=0, fullscr = False, color = "white")
 
 #choose some fonts. If a list is provided, the first font found will be used.
 FONT = ['Gill Sans MT', 'Arial','Helvetica','Verdana'] #use the first font found on this list
@@ -43,7 +43,7 @@ while True:
         code.draw()
         myWin.flip()
         #keys = event.waitKeys(keyList = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "q", "w", "e", "r", "t", "z", "u", "i", "o", "p", "a", "s", "d", "f", "g", "h", "j", "k", "l", "y", "x", "c", "v", "b", "n", "m", "backspace", "enter", "return", "escape"])
-        keys = event.waitKeys(keyList = ["g", "v", "escape"])
+        keys = event.getKeys(keyList = ["g", "v", "escape"])
         #print(keys)
         if "backspace" in keys:
             if len(codeText) > 0:
@@ -54,7 +54,7 @@ while True:
             pressedEnter = True
         elif "escape" in keys:
             core.quit()
-        else:
+        elif len(keys) > 0:
             codeText = keys[0]
             pressedEnter = True
     

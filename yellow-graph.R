@@ -23,11 +23,11 @@ ad <- within(ad, {
 #str(ad)
 
 ### create time intervals
-full.start.violet <- seq(from=as.POSIXct("2013-07-19 14:00"), to=as.POSIXct("2013-07-20 12:00"), by="hour")
-full.stop.violet <- seq(from=as.POSIXct("2013-07-19 16:00"), to=as.POSIXct("2013-07-20 14:00"), by="hour")
+full.start.violet <- seq(from=as.POSIXct("2013-07-19 15:00"), to=as.POSIXct("2013-07-20 13:00"), by="hour")
+full.stop.violet <- seq(from=as.POSIXct("2013-07-19 17:00"), to=as.POSIXct("2013-07-20 15:00"), by="hour")
 
-full.start.yellow <- seq(from=as.POSIXct("2013-07-19 15:00"), to=as.POSIXct("2013-07-20 13:00"), by="hour")
-full.stop.yellow <- seq(from=as.POSIXct("2013-07-19 17:00"), to=as.POSIXct("2013-07-20 15:00"), by="hour")
+full.start.yellow <- seq(from=as.POSIXct("2013-07-19 16:00"), to=as.POSIXct("2013-07-20 14:00"), by="hour")
+full.stop.yellow <- seq(from=as.POSIXct("2013-07-19 18:00"), to=as.POSIXct("2013-07-20 16:00"), by="hour")
 
 
 full.intervals.yellow <- list()
